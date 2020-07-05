@@ -301,7 +301,7 @@ pass the list of elements to the view function.
            return value.split('+')
 
        def to_url(self, values):
-           return '+'.join(BaseConverter.to_url(value)
+           return '+'.join(BaseConverter.to_url(self, value)
                            for value in values)
 
 We need to define two methods: ``to_python()`` and ``to_url()``. As the
